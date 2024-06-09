@@ -1,0 +1,43 @@
+<div class="container mt-2">
+    <h2>{{title}}</h2>
+    
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Pesquisa:</label>
+        <input [(ngModel)]="nomePesquisado" 
+            class="form-control"
+            id="nome">
+    </div>
+
+    <p *ngIf="listaCarros.length == 0">
+        Carros não encontrados!
+    </p>
+    <table class="table table-striped" *ngIf="listaCarros.length > 0">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Marca</th>
+                <th>Carro</th>
+                <th>Ano</th>
+                <th>Quilometragem</th>
+                <th>Valor</th>
+                <th>Data de entrada</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let carro of listaCarros | filtroPesquisa:nomePesquisado">
+                <td>{{carro.id}}</td>
+                <td>{{carro.marca}}</td>
+                <td>{{carro.nome}}</td>
+                <td>{{carro.ano}}</td>
+                <td>{{carro.quilometragem}}</td>
+                <td>{{carro.preco | moeda}}</td>
+                <td>{{carro.dataValidade | date:'dd/MM/yyyy'}}</td>
+                <td><a class='btn btn-primary' routerLink='/edit/{{carro.id}}' >Editar</a></td>
+                <td><a class='btn btn-primary' routerLink='/tabela' (click)="deletar(carro.id)">Deletar</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+

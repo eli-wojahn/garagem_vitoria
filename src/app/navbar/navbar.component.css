@@ -1,0 +1,17 @@
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra na parte inferior */
+  }
+  
+  .navbar-brand {
+    font-weight: bold;
+  }
+  
+  .navbar-nav .nav-link {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: rgba(255, 255, 255, 0.7); /* Mudar a cor do texto ao passar o mouse */
+  }
+  

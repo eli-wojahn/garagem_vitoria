@@ -1,0 +1,51 @@
+<div class="container mt-2">
+    <h2>Cadastrar novos carros</h2>
+    
+    <div class="mb-3">
+        <label for="marca" class="form-label">Marca:</label>
+        <input [(ngModel)]="carro.marca" 
+            class="form-control"
+            id="marca">
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Modelo:</label>
+        <input [(ngModel)]="carro.nome" 
+            class="form-control"
+            id="nome">
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Quilometragem:</label>
+        <input [(ngModel)]="carro.quilometragem" 
+            class="form-control"
+            id="nome">
+    </div>
+
+    <div class="mb-3">
+        <label for="nome" class="form-label">Ano:</label>
+        <input [(ngModel)]="carro.ano" 
+            class="form-control"
+            id="nome">
+    </div>
+
+    <div class="mb-3">
+        <label for="preco" class="form-label">Valor:</label>
+        <input type="number" [(ngModel)]="carro.preco" 
+            class="form-control"
+            id="preco">
+    </div>
+
+    <div class="mb-3">
+        <label for="validade" class="form-label">Data de entrada:</label>
+        <input type="date" [(ngModel)]="carro.dataValidade" 
+            class="form-control"
+            id="validade">
+    </div>
+    <button class="btn btn-primary me-3" (click)="salvar()">
+        {{botaoAcao}}
+    </button>
+    <button class="btn btn-primary" (click)="voltar()">
+        Voltar
+    </button>
+</div>
