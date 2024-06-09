@@ -1,2 +1,44 @@
-node_modules
-node_modules
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# IDEs and editors
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Angular cache and build files
+.angular/
+dist/
+build/
+out-tsc/
+.vite/
+
+# Compiled files
+*.log
+*.tsbuildinfo
+
+# Misc
+.DS_Store
+*.pem
+*.env
+*.tmp
+*.local
+*.local.*
+
+# Environment variable files
+.env
+.env.*.local
+
+# Local configuration files
+*.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
