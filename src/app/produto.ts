@@ -4,6 +4,7 @@ export class Carro {
     quilometragem?: number;
     ano?: number;
     preco?: number;
-    marca?:string;
-    dataValidade?:Date;
+    marca?: string;
+    dataValidade?: Date;
+    imagemUrl?: string; 
 }

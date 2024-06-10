@@ -7,7 +7,8 @@
       "preco": 76000,
       "ano": 2022,
       "quilometragem": 29000,
-      "dataValidade": "2023-10-01"
+      "dataValidade": "2023-10-01",
+      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20240209211735053_365915865.jpg"
     },
     {
       "id": "2",
@@ -16,7 +17,8 @@
       "preco": 55000,
       "ano": 2019,
       "quilometragem": 65000,
-      "dataValidade": "2024-11-12"
+      "dataValidade": "2024-11-12",
+      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20240419083507524_576585693.jpg"
     },
     {
       "id": "3",
@@ -25,7 +27,8 @@
       "preco": 69000,
       "ano": 2021,
       "quilometragem": 25000,
-      "dataValidade": "2024-01-09"
+      "dataValidade": "2024-01-09",
+      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20240427114227654_405924145.jpg"
     },
     {
       "id": "4",
@@ -34,7 +37,8 @@
       "preco": 120000,
       "ano": 2022,
       "quilometragem": 4000,
-      "dataValidade": "2023-05-15"
+      "dataValidade": "2023-05-15",
+      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20221101211102049_209558898.jpg"
     },
     {
       "id": "5",
@@ -43,7 +47,8 @@
       "preco": 82000,
       "ano": 2023,
       "quilometragem": 16000,
-      "dataValidade": "2023-06-27"
+      "dataValidade": "2023-06-27",
+      "imagemUrl": "https://www.veiculosaqui.com.br/pictures/13707/fotopop/veiculosaqui_simautomoveis_5784585_0_G_743299464f.jpeg"
     },
     {
       "id": "6",
@@ -52,16 +57,8 @@
       "preco": 43000,
       "ano": 2003,
       "quilometragem": 123000,
-      "dataValidade": "2024-04-25"
-    },
-    {
-      "id": "7",
-      "marca": "Tesla",
-      "nome": "T1",
-      "quilometragem": "2000",
-      "ano": "2024",
-      "preco": 254000,
-      "dataValidade": "2024-04-26"
+      "dataValidade": "2024-04-25",
+      "imagemUrl": "https://www.veiculosaqui.com.br/pictures/4637/fotopop/veiculosaqui_grazzioli_4932d80ab4e94d1f8e18a3cbbed7c953_1712582250951.jpg"
     },
     {
       "id": "8",
@@ -70,7 +67,8 @@
       "quilometragem": "145000",
       "ano": "2001",
       "preco": 13000,
-      "dataValidade": "2024-04-03"
+      "dataValidade": "2024-04-03",
+      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20230720213959069_493386228.jpeg"
     }
   ]
 }

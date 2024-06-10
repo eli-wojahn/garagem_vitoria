@@ -1,13 +1,9 @@
-<div class="row">
-  <div class="col-md-4 mb-4" *ngFor="let carro of carros">
-    <div class="card">
-      <img class="card-img-top" [src]="carro.imagemCarro" alt="Car Image">
-      <div class="card-body">
-        <h5 class="card-title">{{ carro.marca }} - {{ carro.nome }}</h5>
-        <p class="card-text">Preço: R$ {{ carro.preco | number:'1.2-2' }}</p>
-        <p class="card-text">Ano: {{ carro.ano }}</p>
-        <p class="card-text">Quilometragem: {{ carro.quilometragem }} km</p>
-      </div>
-    </div>
+<div class="card">
+  <img [src]="carro.imagemUrl" class="card-img-top" alt="{{carro.nome}}">
+  <div class="card-body">
+    <h5 class="card-title">{{carro.marca}} - {{carro.nome}}</h5>
+    <p class="card-text">Preço: R$ {{carro.preco | currency:'BRL'}}</p>
+    <p class="card-text">Ano: {{carro.ano}}</p>
+    <p class="card-text">Quilometragem: {{carro.quilometragem}} km</p>
   </div>
 </div>

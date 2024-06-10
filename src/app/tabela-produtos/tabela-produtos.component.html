@@ -1,12 +1,9 @@
 <div class="container mt-2">
     <h2>{{title}}</h2>
     
-
     <div class="mb-3">
         <label for="nome" class="form-label">Pesquisa:</label>
-        <input [(ngModel)]="nomePesquisado" 
-            class="form-control"
-            id="nome">
+        <input [(ngModel)]="nomePesquisado" class="form-control" id="nome">
     </div>
 
     <p *ngIf="listaCarros.length == 0">
@@ -34,7 +31,8 @@
                 <td>{{carro.quilometragem}}</td>
                 <td>{{carro.preco | moeda}}</td>
                 <td>{{carro.dataValidade | date:'dd/MM/yyyy'}}</td>
-                <td><a class='btn btn-primary' routerLink='/edit/{{carro.id}}' >Editar</a></td>
+                <td><img [src]="carro.imagemUrl" alt="{{carro.nome}}" style="width: 100px; height: auto;"></td>
+                <td><a class='btn btn-primary' routerLink='/edit/{{carro.id}}'>Editar</a></td>
                 <td><a class='btn btn-primary' routerLink='/tabela' (click)="deletar(carro.id)">Deletar</a></td>
             </tr>
         </tbody>

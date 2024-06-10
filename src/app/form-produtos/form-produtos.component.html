@@ -42,6 +42,14 @@
             class="form-control"
             id="validade">
     </div>
+
+    <div class="mb-3">
+        <label for="imagemUrl" class="form-label">Link da Imagem:</label>
+        <input [(ngModel)]="carro.imagemUrl" 
+            class="form-control"
+            id="imagemUrl">
+    </div>
+    
     <button class="btn btn-primary me-3" (click)="salvar()">
         {{botaoAcao}}
     </button>

@@ -1,0 +1,14 @@
+<div class="container mt-2">
+    <h2>Lista de Carros</h2>
+    <div class="mb-3">
+        <label for="nome" class="form-label">Pesquisa:</label>
+        <input [(ngModel)]="nomePesquisado" class="form-control" id="nome">
+    </div>
+
+    <p *ngIf="listaCarros.length == 0">Carros não encontrados!</p>
+    <div class="row" *ngIf="listaCarros.length > 0">
+        <div class="col-sm-4" *ngFor="let carro of listaCarros | filtroPesquisa:nomePesquisado">
+            <app-car-card [carro]="carro"></app-car-card>
+        </div>
+    </div>
+</div>

@@ -12,6 +12,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CarCardComponent } from './car-card/car-card.component';
+import { CarListComponent } from './car-list/car-list.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CarCardComponent } from './car-card/car-card.component';
     FiltroPesquisaPipe,
     PageNotFoundComponent,
     NavbarComponent,
-    CarCardComponent
+    CarCardComponent,
+    CarListComponent,
   ],
   imports: [
     BrowserModule,

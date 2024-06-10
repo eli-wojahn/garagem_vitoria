@@ -7,12 +7,13 @@ import { Carro } from './produto';
 export class ProdutoService {
   idGen = 6;
   listaProdutos: Carro[] = [
-    { id: 1, nome:"Produto 1", preco: 100, marca: "Marca 1", dataValidade: new Date()},
-    { id: 2, nome:"Produto 2", preco: 200, marca: "Marca 1", dataValidade: new Date()},
-    { id: 3, nome:"Produto 3", preco: 300, marca: "Marca 1", dataValidade: new Date()},
-    { id: 4, nome:"Produto 4", preco: 400, marca: "Marca 2", dataValidade: new Date()},
-    { id: 5, nome:"Produto 5", preco: 500, marca: "Marca 2", dataValidade: new Date()},
-  ];
+    { id: 1, nome: "Produto 1", preco: 100, marca: "Marca 1", dataValidade: new Date(), imagemUrl: "link-da-imagem-1" },
+    { id: 2, nome: "Produto 2", preco: 200, marca: "Marca 1", dataValidade: new Date(), imagemUrl: "link-da-imagem-2" },
+    { id: 3, nome: "Produto 3", preco: 300, marca: "Marca 1", dataValidade: new Date(), imagemUrl: "link-da-imagem-3" },
+    { id: 4, nome: "Produto 4", preco: 400, marca: "Marca 2", dataValidade: new Date(), imagemUrl: "link-da-imagem-4" },
+    { id: 5, nome: "Produto 5", preco: 500, marca: "Marca 2", dataValidade: new Date(), imagemUrl: "link-da-imagem-5" },
+];
+
 
   constructor() { }
 
