@@ -1,58 +1,54 @@
 import { Injectable } from '@angular/core';
 import { Carro } from './produto';
 
+
 @Injectable({
-  providedIn: 'root'
+ providedIn: 'root'
 })
 export class ProdutoService {
-  idGen = 6;
-  listaProdutos: Carro[] = [
-    { id: 1, nome: "Produto 1", preco: 100, marca: "Marca 1", dataValidade: new Date(), imagemUrl: "link-da-imagem-1" },
-    { id: 2, nome: "Produto 2", preco: 200, marca: "Marca 1", dataValidade: new Date(), imagemUrl: "link-da-imagem-2" },
-    { id: 3, nome: "Produto 3", preco: 300, marca: "Marca 1", dataValidade: new Date(), imagemUrl: "link-da-imagem-3" },
-    { id: 4, nome: "Produto 4", preco: 400, marca: "Marca 2", dataValidade: new Date(), imagemUrl: "link-da-imagem-4" },
-    { id: 5, nome: "Produto 5", preco: 500, marca: "Marca 2", dataValidade: new Date(), imagemUrl: "link-da-imagem-5" },
+ idGen = 6;
+ listaCarros: Carro[] = [
 ];
 
+ constructor() { }
 
-  constructor() { }
 
-  private generateId() {
-    return this.idGen++;
-  }
+ private generateId() {
+   return this.idGen++;
+ }
 
-  listar(): Carro[] {
-    return this.listaProdutos;
-  }
-  
+
+ listar(): Carro[] {
+   return this.listaCarros;
+ }
   inserir(produto: Carro) {
-    produto.id = this.generateId();
-    this.listaProdutos.push(produto);
-  }
+   produto.id = this.generateId();
+   this.listaCarros.push(produto);
+ }
 
-  buscarPorId(id: number): Carro {
-    const produto = this.listaProdutos.find(produto => produto.id == id);
-    return produto
-      ? Object.assign({}, produto)
-      : new Carro();
-  }
+ buscarPorId(id: number): Carro {
+   const produto = this.listaCarros.find(produto => produto.id == id);
+   return produto
+     ? Object.assign({}, produto)
+     : new Carro();
+ }
 
-  editar(id:number, produto: Carro) {
-    const indice = this.getIndice(id);
-    if(indice >=0){
-      this.listaProdutos[indice] = produto;
-    }    
-  }
+ editar(id:number, produto: Carro) {
+   const indice = this.getIndice(id);
+   if(indice >=0){
+     this.listaCarros[indice] = produto;
+   }   
+ }
 
-  deletar(id?:number) {
-    const indice = this.getIndice(id);
-    if(indice >=0){
-      this.listaProdutos.splice(indice, 1);
-    }
-  }
+ deletar(id?:number) {
+   const indice = this.getIndice(id);
+   if(indice >=0){
+     this.listaCarros.splice(indice, 1);
+   }
+ }
 
-  private getIndice(id?:number) {
-    return this.listaProdutos.findIndex(produto => produto.id==id);
-  }
+ private getIndice(id?:number) {
+   return this.listaCarros.findIndex(produto => produto.id==id);
+ }
 
 }

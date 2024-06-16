@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TabelaProdutosComponent } from './tabela-produtos/tabela-produtos.component';
@@ -13,26 +12,31 @@ import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CarCardComponent } from './car-card/car-card.component';
 import { CarListComponent } from './car-list/car-list.component';
+import { VendedorFormComponent } from './vendedor-form/vendedor-form.component';
+import { VendedorListComponent } from './vendedor-list/vendedor-list.component';
+
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TabelaProdutosComponent,
-    FormProdutosComponent,
-    MoedaPipe,
-    FiltroPesquisaPipe,
-    PageNotFoundComponent,
-    NavbarComponent,
-    CarCardComponent,
-    CarListComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+ declarations: [
+   AppComponent,
+   TabelaProdutosComponent,
+   FormProdutosComponent,
+   MoedaPipe,
+   FiltroPesquisaPipe,
+   PageNotFoundComponent,
+   NavbarComponent,
+   CarCardComponent,
+   CarListComponent,
+   VendedorFormComponent,
+   VendedorListComponent,
+ ],
+ imports: [
+   BrowserModule,
+   AppRoutingModule,
+   FormsModule,
+   HttpClientModule
+ ],
+ providers: [],
+ bootstrap: [AppComponent]
 })
 export class AppModule { }

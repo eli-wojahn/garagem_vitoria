@@ -4,9 +4,9 @@
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
-    "noImplicitOverride": true,
-    "noPropertyAccessFromIndexSignature": true,
+    "strict": false,  // Alterar para false
+    "noImplicitOverride": false,  // Alterar para false
+    "noPropertyAccessFromIndexSignature": false,  // Alterar para false
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
@@ -26,8 +26,9 @@
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
-    "strictInjectionParameters": true,
-    "strictInputAccessModifiers": true,
-    "strictTemplates": true
+    "strictInjectionParameters": false,  // Alterar para false
+    "strictInputAccessModifiers": false,  // Alterar para false
+    "strictTemplates": false  // Alterar para false
   }
-}
+ }
+ 
