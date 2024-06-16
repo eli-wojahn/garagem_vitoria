@@ -1,0 +1,21 @@
+<div class="container mt-2">
+    <h2>{{botaoAcao}} Vendedor</h2>
+    <div class="mb-3">
+        <label for="nome" class="form-label">Nome:</label>
+        <input [(ngModel)]="vendedor.nome" class="form-control" id="nome">
+    </div>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email:</label>
+        <input [(ngModel)]="vendedor.email" class="form-control" id="email">
+    </div>
+    <div class="mb-3">
+        <label for="telefone" class="form-label">Telefone:</label>
+        <input [(ngModel)]="vendedor.telefone" class="form-control" id="telefone">
+    </div>
+    <div class="mb-3">
+        <label for="cpf" class="form-label">CPF:</label>
+        <input [(ngModel)]="vendedor.cpf" class="form-control" id="cpf">
+    </div>
+    <button class="btn btn-primary me-3" (click)="salvar()">{{botaoAcao}}</button>
+    <button class="btn btn-secondary" (click)="voltar()">Voltar</button>
+</div>
