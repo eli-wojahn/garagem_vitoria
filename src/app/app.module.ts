@@ -14,6 +14,7 @@ import { CarCardComponent } from './car-card/car-card.component';
 import { CarListComponent } from './car-list/car-list.component';
 import { VendedorFormComponent } from './vendedor-form/vendedor-form.component';
 import { VendedorListComponent } from './vendedor-list/vendedor-list.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { VendedorListComponent } from './vendedor-list/vendedor-list.component';
    BrowserModule,
    AppRoutingModule,
    FormsModule,
-   HttpClientModule
+   HttpClientModule,
+   FontAwesomeModule
  ],
  providers: [],
  bootstrap: [AppComponent]

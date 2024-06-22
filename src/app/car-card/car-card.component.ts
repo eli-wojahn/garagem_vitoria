@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Carro } from '../produto';
+import { faCalendar, faTachometerAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-car-card',
@@ -8,4 +9,6 @@ import { Carro } from '../produto';
 })
 export class CarCardComponent {
   @Input() carro!: Carro;
+  faCalendar = faCalendar;
+  faTachometerAlt = faTachometerAlt;
 }

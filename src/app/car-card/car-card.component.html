@@ -1,9 +1,11 @@
-<div class="card">
+<div class="card mb-3">
   <img [src]="carro.imagemUrl" class="card-img-top" alt="{{carro.nome}}">
   <div class="card-body">
     <h5 class="card-title">{{carro.marca}} - {{carro.nome}}</h5>
-    <p class="card-text">Preço: R$ {{carro.preco | currency:'BRL'}}</p>
-    <p class="card-text">Ano: {{carro.ano}}</p>
-    <p class="card-text">Quilometragem: {{carro.quilometragem}} km</p>
+    <p class="card-text">
+      <fa-icon [icon]="faCalendar"></fa-icon>  {{carro.ano}} <br>
+      <fa-icon [icon]="faTachometerAlt"></fa-icon>   {{carro.quilometragem}} km
+    </p>
+    <p class="card-text preco"><strong></strong>{{carro.preco | moeda}}</p>
   </div>
 </div>

@@ -25,12 +25,12 @@
     {
       "id": "3",
       "marca": "Toyota",
-      "nome": "Prius",
-      "preco": 69000,
-      "ano": 2021,
+      "nome": "Etios",
+      "preco": 120000,
+      "ano": "2014",
       "quilometragem": 25000,
       "dataValidade": "2024-01-09",
-      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20240427114227654_405924145.jpg",
+      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20240217210530045_5353321.jpg",
       "vendedorId": "5bda"
     },
     {
@@ -41,7 +41,8 @@
       "ano": 2022,
       "quilometragem": 4000,
       "dataValidade": "2023-05-15",
-      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20221101211102049_209558898.jpg"
+      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20221101211102049_209558898.jpg",
+      "vendedorId": "2"
     },
     {
       "id": "5",
@@ -51,17 +52,19 @@
       "ano": 2023,
       "quilometragem": 16000,
       "dataValidade": "2023-06-27",
-      "imagemUrl": "https://www.veiculosaqui.com.br/pictures/13707/fotopop/veiculosaqui_simautomoveis_5784585_0_G_743299464f.jpeg"
+      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20240511100113584_945270465.jpg",
+      "vendedorId": "1"
     },
     {
       "id": "6",
-      "marca": "Mistubishi",
-      "nome": "L200",
-      "preco": 43000,
-      "ano": 2003,
-      "quilometragem": 123000,
+      "marca": "Chevrolet",
+      "nome": "Celta",
+      "preco": 35900,
+      "ano": "2015",
+      "quilometragem": "92000",
       "dataValidade": "2024-04-25",
-      "imagemUrl": "https://www.veiculosaqui.com.br/pictures/4637/fotopop/veiculosaqui_grazzioli_4932d80ab4e94d1f8e18a3cbbed7c953_1712582250951.jpg"
+      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20240508105042618_444325973.jpg",
+      "vendedorId": "1"
     },
     {
       "id": "8",
@@ -71,7 +74,8 @@
       "ano": "2001",
       "preco": 13000,
       "dataValidade": "2024-04-03",
-      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20230720213959069_493386228.jpeg"
+      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20230720213959069_493386228.jpeg",
+      "vendedorId": "2"
     }
   ],
   "vendedores": [
