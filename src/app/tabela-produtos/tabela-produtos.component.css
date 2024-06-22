@@ -1,0 +1,10 @@
+@media (max-width: 576px) {
+    .container.mt-2 .d-flex {
+      flex-direction: column;
+    }
+  
+    .container.mt-2 .d-flex h2 {
+      margin-bottom: 1rem;
+    }
+  }
+  

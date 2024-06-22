@@ -20,7 +20,7 @@
       "quilometragem": 65000,
       "dataValidade": "2024-11-12",
       "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20240419083507524_576585693.jpg",
-      "vendedorId": "2"
+      "vendedorId": "4ff8"
     },
     {
       "id": "3",
@@ -99,6 +99,13 @@
       "email": "ms_21@gmail.com",
       "telefone": "53987263739",
       "cpf": "123.456.789-90"
+    },
+    {
+      "id": "4ff8",
+      "nome": "Carlos Augusto",
+      "email": "carlinhos_au@gmail.com",
+      "telefone": "5391283817",
+      "cpf": "05478665420"
     }
   ]
 }
