@@ -2,58 +2,48 @@
     <h2>Cadastrar novos carros</h2>
     
     <div class="mb-3">
-        <label for="marca" class="form-label">Marca:</label>
-        <input [(ngModel)]="carro.marca" 
-            class="form-control"
-            id="marca">
+      <label for="marca" class="form-label">Marca:</label>
+      <input [(ngModel)]="carro.marca" class="form-control" id="marca">
     </div>
-
+  
     <div class="mb-3">
-        <label for="nome" class="form-label">Modelo:</label>
-        <input [(ngModel)]="carro.nome" 
-            class="form-control"
-            id="nome">
+      <label for="nome" class="form-label">Modelo:</label>
+      <input [(ngModel)]="carro.nome" class="form-control" id="nome">
     </div>
-
+  
     <div class="mb-3">
-        <label for="nome" class="form-label">Quilometragem:</label>
-        <input [(ngModel)]="carro.quilometragem" 
-            class="form-control"
-            id="nome">
+      <label for="quilometragem" class="form-label">Quilometragem:</label>
+      <input [(ngModel)]="carro.quilometragem" class="form-control" id="quilometragem">
     </div>
-
+  
     <div class="mb-3">
-        <label for="nome" class="form-label">Ano:</label>
-        <input [(ngModel)]="carro.ano" 
-            class="form-control"
-            id="nome">
+      <label for="ano" class="form-label">Ano:</label>
+      <input [(ngModel)]="carro.ano" class="form-control" id="ano">
     </div>
-
+  
     <div class="mb-3">
-        <label for="preco" class="form-label">Valor:</label>
-        <input type="number" [(ngModel)]="carro.preco" 
-            class="form-control"
-            id="preco">
+      <label for="preco" class="form-label">Valor:</label>
+      <input type="number" [(ngModel)]="carro.preco" class="form-control" id="preco">
     </div>
-
+  
     <div class="mb-3">
-        <label for="validade" class="form-label">Data de entrada:</label>
-        <input type="date" [(ngModel)]="carro.dataValidade" 
-            class="form-control"
-            id="validade">
+      <label for="dataValidade" class="form-label">Data de entrada:</label>
+      <input type="date" [(ngModel)]="carro.dataValidade" class="form-control" id="dataValidade">
     </div>
-
+  
     <div class="mb-3">
-        <label for="imagemUrl" class="form-label">Link da Imagem:</label>
-        <input [(ngModel)]="carro.imagemUrl" 
-            class="form-control"
-            id="imagemUrl">
+      <label for="imagemUrl" class="form-label">Link da Imagem:</label>
+      <input [(ngModel)]="carro.imagemUrl" class="form-control" id="imagemUrl">
     </div>
-    
-    <button class="btn btn-primary me-3" (click)="salvar()">
-        {{botaoAcao}}
-    </button>
-    <button class="btn btn-primary" (click)="voltar()">
-        Voltar
-    </button>
-</div>
+  
+    <div class="mb-3">
+      <label for="vendedorId" class="form-label">Vendedor Responsável:</label>
+      <select [(ngModel)]="carro.vendedorId" class="form-control" id="vendedorId">
+        <option *ngFor="let vendedor of vendedores" [value]="vendedor.id">{{vendedor.nome}}</option>
+      </select>
+    </div>
+  
+    <button class="btn btn-primary me-3" (click)="salvar()">{{botaoAcao}}</button>
+    <button class="btn btn-secondary" (click)="voltar()">Voltar</button>
+  </div>
+  

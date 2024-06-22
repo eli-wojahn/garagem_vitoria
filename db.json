@@ -8,7 +8,8 @@
       "ano": 2022,
       "quilometragem": 29000,
       "dataValidade": "2023-10-01",
-      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20240209211735053_365915865.jpg"
+      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20240209211735053_365915865.jpg",
+      "vendedorId": "1"
     },
     {
       "id": "2",
@@ -18,7 +19,8 @@
       "ano": 2019,
       "quilometragem": 65000,
       "dataValidade": "2024-11-12",
-      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20240419083507524_576585693.jpg"
+      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20240419083507524_576585693.jpg",
+      "vendedorId": "2"
     },
     {
       "id": "3",
@@ -28,7 +30,8 @@
       "ano": 2021,
       "quilometragem": 25000,
       "dataValidade": "2024-01-09",
-      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20240427114227654_405924145.jpg"
+      "imagemUrl": "https://www.veiculoaqui.com.br/fotopop/veiculoaqui20240427114227654_405924145.jpg",
+      "vendedorId": "5bda"
     },
     {
       "id": "4",

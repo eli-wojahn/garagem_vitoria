@@ -1,44 +1,47 @@
 <div class="container mt-2">
     <div class="d-flex justify-content-between align-items-center">
-        <h2>{{title}}</h2>
-        <a class="btn btn-primary" routerLink="/novo-carro">Novo Carro</a>
+      <h2>{{title}}</h2>
+      <a class="btn btn-primary" routerLink="/novo-carro">Novo Carro</a>
     </div>
-    
+  
     <div class="mb-3">
-        <label for="nome" class="form-label">Pesquisa:</label>
-        <input [(ngModel)]="nomePesquisado" class="form-control" id="nome">
+      <label for="nome" class="form-label">Pesquisa:</label>
+      <input [(ngModel)]="nomePesquisado" class="form-control" id="nome">
     </div>
-
+  
     <p *ngIf="listaCarros.length == 0">Carros não encontrados!</p>
     <table class="table table-striped" *ngIf="listaCarros.length > 0">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Marca</th>
-                <th>Carro</th>
-                <th>Ano</th>
-                <th>Quilometragem</th>
-                <th>Valor</th>
-                <th>Data de entrada</th>
-                <th>Imagem</th>
-                <th>Ação</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let carro of listaCarros | filtroPesquisa:nomePesquisado">
-                <td>{{carro.id}}</td>
-                <td>{{carro.marca}}</td>
-                <td>{{carro.nome}}</td>
-                <td>{{carro.ano}}</td>
-                <td>{{carro.quilometragem}}</td>
-                <td>{{carro.preco | moeda}}</td>
-                <td>{{carro.dataValidade | date:'dd/MM/yyyy'}}</td>
-                <td><img [src]="carro.imagemUrl" alt="{{carro.nome}}" style="width: 100px; height: auto;"></td>
-                <td>
-                    <a class='btn btn-primary me-2' routerLink='/edit/{{carro.id}}'>Editar</a>
-                    <button class='btn btn-danger' (click)="deletar(carro.id)">Deletar</button>
-                </td>
-            </tr>
-        </tbody>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Marca</th>
+          <th>Carro</th>
+          <th>Ano</th>
+          <th>Quilometragem</th>
+          <th>Valor</th>
+          <th>Data de entrada</th>
+          <th>Imagem</th>
+          <th>Vendedor Responsável</th>
+          <th>Ação</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let carro of listaCarros | filtroPesquisa:nomePesquisado">
+          <td>{{carro.id}}</td>
+          <td>{{carro.marca}}</td>
+          <td>{{carro.nome}}</td>
+          <td>{{carro.ano}}</td>
+          <td>{{carro.quilometragem}}</td>
+          <td>{{carro.preco | moeda}}</td>
+          <td>{{carro.dataValidade | date:'dd/MM/yyyy'}}</td>
+          <td><img [src]="carro.imagemUrl" alt="{{carro.nome}}" style="width: 100px; height: auto;"></td>
+          <td>{{getVendedorNome(carro.vendedorId)}}</td>
+          <td>
+            <a class='btn btn-primary me-2' routerLink='/edit/{{carro.id}}'>Editar</a>
+            <button class='btn btn-danger' (click)="deletar(carro.id)">Deletar</button>
+          </td>
+        </tr>
+      </tbody>
     </table>
-</div>
+  </div>
+  

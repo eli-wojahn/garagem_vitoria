@@ -1,19 +1,30 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Carro } from '../produto';
 import { ProdutoApiService } from '../produto-api.service';
+import { VendedorApiService } from '../vendedor-api.service';
+import { Vendedor } from '../vendedor';
 
 @Component({
   selector: 'app-tabela-produtos',
   templateUrl: './tabela-produtos.component.html',
-  styleUrl: './tabela-produtos.component.css'
+  styleUrls: ['./tabela-produtos.component.css']
 })
-export class TabelaProdutosComponent {
+export class TabelaProdutosComponent implements OnInit {
   @Input() title= "Tabela de Carros";
   listaCarros: Carro[] = [];
+  vendedores: Vendedor[] = [];
   nomePesquisado= "";
 
-  constructor(private produtoApiService: ProdutoApiService) {    
-      this.listar();
+  constructor(
+    private produtoApiService: ProdutoApiService,
+    private vendedorApiService: VendedorApiService
+  ) { }
+
+  ngOnInit(): void {
+    this.listar();
+    this.vendedorApiService.listar().subscribe(
+      (vendedores) => this.vendedores = vendedores
+    );
   }
 
   listar() {
@@ -24,13 +35,17 @@ export class TabelaProdutosComponent {
     );
   }
 
-  deletar(id?:number) {
+  deletar(id?: number) {
     this.produtoApiService.deletar(id!).subscribe(
-      (produto) => {
+      () => {
         alert(`Produto deletado com sucesso!`);   
         this.listar();     
       }
-    )
+    );
+  }
+
+  getVendedorNome(vendedorId: number): string {
+    const vendedor = this.vendedores.find(v => v.id === vendedorId);
+    return vendedor ? vendedor.nome : 'Sem vendedor responsável';
   }
 }
-

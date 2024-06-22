@@ -6,5 +6,6 @@ export class Carro {
     preco?: number;
     marca?: string;
     dataValidade?: Date;
-    imagemUrl?: string; 
-}
+    imagemUrl?: string;
+    vendedorId?: number; 
+  }
