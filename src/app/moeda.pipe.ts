@@ -4,17 +4,18 @@ import { Pipe, PipeTransform } from '@angular/core';
   name: 'moeda'
 })
 export class MoedaPipe implements PipeTransform {
-  //300 ou 300.004342 -> 300.00
-  //300.00 -> 300,00
-  //300,00 -> R$ 300,00
   transform(valor: number | undefined): string {
-    if(!valor) {
+    if (valor === undefined || valor === null) {
       return "";
     }
-    const valorDecimal = valor.toFixed(2);
-    const valorDecimalBr = valorDecimal.replace('.', ',');
-    const valorMoeda = 'R$ '+valorDecimalBr;
-    return valorMoeda;
-  }
 
+    const valorFormatado = new Intl.NumberFormat('pt-BR', {
+      style: 'currency',
+      currency: 'BRL',
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    }).format(valor);
+
+    return valorFormatado;
+  }
 }
