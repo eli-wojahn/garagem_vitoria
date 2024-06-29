@@ -35,6 +35,12 @@ export class TabelaProdutosComponent implements OnInit {
     );
   }
 
+  confirmarDeletar(id?: number) {
+    if (confirm('Tem certeza que deseja deletar este carro?')) {
+      this.deletar(id);
+    }
+  }
+
   deletar(id?: number) {
     this.produtoApiService.deletar(id!).subscribe(
       () => {
