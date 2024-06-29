@@ -6,21 +6,24 @@ import { TabelaProdutosComponent } from './tabela-produtos/tabela-produtos.compo
 import { CarListComponent } from './car-list/car-list.component';
 import { VendedorListComponent } from './vendedor-list/vendedor-list.component';
 import { VendedorFormComponent } from './vendedor-form/vendedor-form.component';
+import { AuthGuard } from './auth.guard';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
- { path: 'tabela', component: TabelaProdutosComponent },
- { path: 'novo', component: FormProdutosComponent },
- { path: 'carros', component: CarListComponent },
- { path: 'edit/:id', component: FormProdutosComponent },
- { path: 'vendedores', component: VendedorListComponent },
- { path: 'edit-vendedor/:id', component: VendedorFormComponent },
- { path: 'novo-vendedor', component: VendedorFormComponent },
- { path: '', redirectTo: '/carros', pathMatch: 'full'},
- { path: '**', component: PageNotFoundComponent}
+    { path: 'login', component: LoginComponent },
+    { path: 'tabela', component: TabelaProdutosComponent, canActivate: [AuthGuard] },
+    { path: 'novo-carro', component: FormProdutosComponent, canActivate: [AuthGuard] },
+    { path: 'carros', component: CarListComponent },
+    { path: 'edit/:id', component: FormProdutosComponent, canActivate: [AuthGuard] },
+    { path: 'vendedores', component: VendedorListComponent, canActivate: [AuthGuard] },
+    { path: 'edit-vendedor/:id', component: VendedorFormComponent, canActivate: [AuthGuard] },
+    { path: 'novo-vendedor', component: VendedorFormComponent, canActivate: [AuthGuard] },
+    { path: '', redirectTo: '/carros', pathMatch: 'full' },
+    { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
- imports: [RouterModule.forRoot(routes)],
- exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -15,6 +15,7 @@ import { CarListComponent } from './car-list/car-list.component';
 import { VendedorFormComponent } from './vendedor-form/vendedor-form.component';
 import { VendedorListComponent } from './vendedor-list/vendedor-list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
    CarListComponent,
    VendedorFormComponent,
    VendedorListComponent,
+   LoginComponent,
  ],
  imports: [
    BrowserModule,
