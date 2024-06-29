@@ -107,5 +107,13 @@
       "telefone": "5391283817",
       "cpf": "05478665420"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin",
+      "token": "some-random-token"
+    }
   ]
 }
