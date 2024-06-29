@@ -21,7 +21,24 @@
         <li class="nav-item">
           <a class="nav-link" href="#">📞 (53)3025-2565</a>
         </li>
+        <li *ngIf="isAuthenticated()" class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            <fa-icon [icon]="['fas', 'user']" class="me-2"></fa-icon>
+            {{ username }}
+            <fa-icon [icon]="['fas', 'sign-out-alt']" class="ms-2"></fa-icon>
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" (click)="logout()"><fa-icon [icon]="['fas', 'sign-out-alt']"></fa-icon> Logout</a></li>
+          </ul>
+        </li>
+        <li *ngIf="!isAuthenticated()" class="nav-item">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+
+
+
