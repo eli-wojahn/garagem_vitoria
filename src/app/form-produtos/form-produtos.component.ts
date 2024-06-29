@@ -38,6 +38,11 @@ export class FormProdutosComponent implements OnInit {
   }
 
   salvar() {
+    if (!this.carro.marca || !this.carro.nome || !this.carro.quilometragem || !this.carro.ano || !this.carro.preco || !this.carro.dataValidade || !this.carro.imagemUrl || !this.carro.vendedorId) {
+      alert('Por favor, preencha todos os campos.');
+      return;
+    }
+
     if (this.id) {
       this.produtoApiService.editar(this.id, this.carro).subscribe(
         () => {
