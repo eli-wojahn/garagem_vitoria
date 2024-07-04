@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class AuthService {
-  private apiUrl = 'http://localhost:3001/auth/login';
+  private apiUrl = 'https://garagem-vitoria-backend.onrender.com/auth/login';
 
   constructor(private http: HttpClient, private router: Router) {}
 
