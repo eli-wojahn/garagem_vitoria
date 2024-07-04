@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Vendedor } from './vendedor';
 
-const BASE_API = "http://localhost:3000/vendedores";
+const BASE_API = "https://garagem-vitoria-backend.onrender.com/api/vendedores";
 
 const httpOptions = {
   headers: new HttpHeaders({
